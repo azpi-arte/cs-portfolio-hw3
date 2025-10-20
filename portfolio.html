@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title> Jesus' Portfolio </title>
+    <meta name="description" content="CS Portfolio for the Software/Quality Engineer: Jesus Azpitarte. ">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="icon" href="assets/images/favicon_io/favicon.ico" type="image/x-icon">
+    <style>
+      project-snapshot {
+        display: flex;
+        flex-direction: column;
+        width: fit-content;
+        align-items: center;
+      }
+
+      project-snapshot button {
+        max-width: 5rem;
+        flex-wrap: nowrap;
+      }
+    </style>
+  </head>
+  <body>
+    <noscript>
+      <p> This website requires javascript enabled for full functionality. </p>
+    </noscript>
+
+    <header>
+      <nav>
+        <a href="index.html"> Home </a>
+        <a href="about.html"> About Me </a>
+        <a href="portfolio.html"> Portfolio </a>
+        <a href="contact.html"> Contact </a>
+        <a href="/experiments.html"> Experiments </a>
+        
+        <button aria-label="Open settings" command="show-modal" commandfor="settings-dialog">
+          Settings 
+        </button>
+        <dialog id="settings-dialog" >
+          <button command="close" commandfor="settings-dialog"> Close Settings </button>
+          <label> Dark Mode: </label>
+          <input type="checkbox" id="dark-mode">
+        </dialog>
+      </nav>
+    </header>
+     
+    <article id="portfolio-page">
+      <h1> My Projects </h1>
+
+      <ol>
+        <li> <a> Project1 1 </a></li>
+        <li> <a> Project1 2 </a></li>
+        <li> <a> Project1 3 </a></li>
+      </ol>
+
+      <picture>
+        <source srcset="/assets/svg/undraw_working-at-home_pxaa.svg" type="image/svg+xml" >
+        <img src="/assets/svg/undraw_working-at-home_pxaa.svg" alt="" width="400">  
+        <!-- This static width is temporary, i will make it dynamic with css -->
+      </picture>
+
+      <project-snapshot>
+        <h2> Project 1 Name </h2>
+
+        <figure>
+          <picture>
+            <source srcset="/assets/images/research-large.webp">
+            <img src="/assets/images/research-large.jpg" alt="jesus with presenting his quantum research photo with his peers">
+          </picture>
+
+          <figcaption>
+            a caption for this image.
+          </figcaption>
+        </figure>
+
+        <label>Project Progress</label>
+        <progress value="100"> </progress>
+        <a href="example-project.html">
+          View Project
+        </a>
+      </project-snapshot>
+
+    </article>
+  </body>
+</html>
