@@ -42,6 +42,19 @@
             <button command="close" commandfor="settings-dialog"> Close Settings </button>  
           </settings-content>
         </dialog>
+
+        <input type="checkbox" id="menu-toggle">
+        <label for="menu-toggle" id="hamburger"> &#9776; </label>
+
+        <aside id="side-nav">
+          <label for="menu-toggle" id="close">&#10005;</label>
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About Me</a></li>
+            <li><a href="portfolio.html">Portfolio</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </aside>
       </nav>
     </header>
 
@@ -96,34 +109,6 @@
           </tool-list>
         </section>
 
-        <!-- 
-        <section id="interview-questions">
-          <h2> Interview Questions </h2>
-          <p> These are my answers to some of </p>
-          <ol>
-            <li>
-              <details>
-                <summary> Why should we hire you? </summary>
-              </details>
-            </li>
-            <li>
-              <details>
-                <span>How do you give and receive feedback? </span>
-              </details>
-            </li>
-            <li>
-              <details>
-                <summary> What's your approach to problem solving?  </summary>
-              </details>
-            </li>
-            <li>
-              <details>
-                <summary> What challenges have shapped your professional approach? </summary>
-              </details>
-            </li>
-          </ol>
-        </section> -->
-
         <section id="personal-interests">
           <h2> Personal Interests </h2>
           <h3> Guitar </h3>
@@ -137,10 +122,53 @@
           </audio>
 
           <h4> Track Art Cover </h4>
-          <img src="./assets//images/baldomero.png" width=70% height=auto alt="Art cover with a hand on top of an ocean. "> 
+          <figure id="baldomero">
+          <picture>
+            <source type="image/webp"
+                    srcset="./assets/images/baldomero/baldomero-400.webp 400w,
+                            ./assets/images/baldomero/baldomero-800.webp 800w,
+                            ./assets/images/baldomero/baldomero-1200.webp 1200w"
+                    sizes="(max-width:600px) 100vw, (max-width:1200px) 50vw, 33vw">
+            <source type="image/jpeg"
+                    srcset="./assets/images/baldomero/baldomero-400.jpg 400w,
+                            ./assets/images/baldomero/baldomero-800.jpg 800w,
+                            ./assets/images/baldomero/baldomero-1200.jpg 1200w"
+                    sizes="(max-width:600px) 100vw, (max-width:1200px) 50vw, 33vw">
+            <img src="./assets/images/baldomero/baldomero-800.jpg"
+                alt="Empty hand reaching out on top of a colorles ocean with text saying: The Azymptote Reaches Zero"
+                loading="lazy" style="width:100%;height:auto;">
+          </picture>
+          <figcaption>
+            <p>Hypothetical album cover for the rock demo titled &quot;Asymptote&quot; </p>
+            <p> By Jesus Azpitarte </p>
+          </figcaption>
+        </figure>
+ 
+
           <h3> Art </h3>
           <p> My favorite hobby includes drawing and all sorts of two-dimensional art!  Here's a piece I'm really proud of:</p>
-          <img src="./assets/images/art/anger.jpg"> 
+          <figure id="art-anger">
+          <picture>
+            <source type="image/webp"
+                    srcset="./assets/images/art/anger/anger-400.webp 400w,
+                            ./assets/images/art/anger/anger-800.webp 800w,
+                            ./assets/images/art/anger/anger-1200.webp 1200w"
+                    sizes="(max-width:600px) 100vw, (max-width:1200px) 50vw, 33vw">
+            <source type="image/jpeg"
+                    srcset="./assets/images/art/anger/anger-400.jpg 400w,
+                            ./assets/images/art/anger/anger-800.jpg 800w,
+                            ./assets/images/art/anger/anger-1200.jpg 1200w"
+                    sizes="(max-width:600px) 100vw, (max-width:1200px) 50vw, 33vw">
+            <img src="./assets/images/art/anger/anger-800.jpg"
+                alt="Greyscale digital drawing of a ferocious dragon "
+                loading="lazy" style="width:100%;height:auto;">
+          </picture>
+          <figcaption>
+            <p> Anger </p>
+            <p> By Jesus Azpitarte </p>
+
+          </figcaption>
+        </figure>
         </section>
       </article>
     </main>

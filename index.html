@@ -43,6 +43,19 @@
             <button command="close" commandfor="settings-dialog"> Close Settings </button>  
           </settings-content>
         </dialog>
+
+        <input type="checkbox" id="menu-toggle">
+        <label for="menu-toggle" id="hamburger"> &#9776; </label>
+
+        <aside id="side-nav">
+          <label for="menu-toggle" id="close">&#10005;</label>
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About Me</a></li>
+            <li><a href="portfolio.html">Portfolio</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </aside>
       </nav>
     </header>
 
@@ -86,6 +99,6 @@ Found here on web.dev website: https://web.dev/blog/baseline-entry-animations?hl
 Explanation: It provides a way to apply animations on elements that are initially
 on "display: none". Before, the elements would just pop into existence.
 
-Implementation: I used it in the settings dialog box. It pops in the aniamtion from
-the bottom. Ironically,
+Implementation: I used it in the settings dialog box. It pops in the animation from
+the bottom. Ironically, there is no clean feature to animate into something that is display none.
 -->
