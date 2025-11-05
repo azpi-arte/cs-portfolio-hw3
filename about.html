@@ -4,9 +4,11 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title> About Jesus Page </title>
-    <meta name="description" content="CS Portfolio for the Software/Quality Engineer: Jesus Azpitarte. ">
+    <meta name="description" content="Page describing the professional background and preferences of Jesus Azpitarte ">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="icon" href="/src/assets/images/favicon_io/favicon.ico" type="image/x-icon">
+    <link rel="icon" href="./assets/images/favicon_io/favicon-16x16.png" type="image/x-icon">
+    <link rel="stylesheet" href="assets/css/main.css">
+    <link rel="stylesheet" href="assets/css/about-me.css">
   </head>
 
   <body>
@@ -16,108 +18,140 @@
 
     <header>
       <nav>
-        <a href="index.html"> Home </a>
-        <a href="about.html"> About Me </a>
-        <a href="portfolio.html"> Portfolio </a>
-        <a href="contact.html"> Contact </a>
-        <a href="/experiments.html"> Experiments </a>
+        <svg id="logo" width="40" height="40" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+          <circle cx="6.5" cy="10" r="4" stroke="currentColor" fill="none" stroke-width="0.5"/>
+          <circle cx="6.5" cy="10" r="2.5" stroke="currentColor" fill="none" stroke-width="0.5"/>
+          <circle cx="13.5" cy="10" r="4" stroke="currentColor" fill="none" stroke-width="0.5"/>
+          <circle cx="13.5" cy="10" r="2.5" stroke="currentColor" fill="none" stroke-width="0.5"/>
+        </svg>
 
-        
+        <nav-links>
+          <a href="index.html"> Home </a>
+          <a href="about.html"> About Me </a>
+          <a href="portfolio.html"> Portfolio </a>
+          <a href="contact.html"> Contact </a>
+        </nav-links>
+
         <button aria-label="Open settings" command="show-modal" commandfor="settings-dialog">
           Settings 
         </button>
-        <dialog id="settings-dialog" >
-          <button command="close" commandfor="settings-dialog"> Close Settings </button>
-          <label> Dark Mode: </label>
-          <input type="checkbox" id="dark-mode">
+
+        <dialog id="settings-dialog">
+          <settings-content>
+            <span> <input type="checkbox" id="dark-mode"> <label> Dark Mode </label> </span>
+            <button command="close" commandfor="settings-dialog"> Close Settings </button>  
+          </settings-content>
         </dialog>
       </nav>
     </header>
 
-    <!-- Main content would go here -->
-     <main>
+    <main>
       <article id="about-me">
-        <h1> About Me </h1>
+        
         <section id="professional-snapshot">
-          <h2> Professional Snapshot </h2>
-
-          <picture> 
-            <source srcset="/assets/images/vegas-small.webp" media="(max-width: 850px)">
-            <source srcset="/assets/images/vegas-full.webp" media="(min-width: 1100px)">
-            <img src="/assets/images/vegas-large.jpg" alt="jesus holding the peace sign in Las Vegas.">
+          <h1> About Me </h1>
+          <picture id="portrait-square">
+            <source type="image/webp" 
+                    srcset="./assets/images/portrait-square/portrait-square-400.webp 400w, 
+                            ./assets/images/portrait-square/portrait-square-800.webp 800w, 
+                            ./assets/images/portrait-square/portrait-square-1200.webp 1200w" 
+                    sizes="(max-width:600px) 100vw, (max-width:1200px) 50vw, 33vw">
+            <source type="image/jpeg" 
+                    srcset="./assets/images/portrait-square/portrait-square-400.jpg 400w, 
+                            ./assets/images/portrait-square/portrait-square-800.jpg 800w, 
+                            ./assets/images/portrait-square/portrait-square-1200.jpg 1200w" 
+                    sizes="(max-width:600px) 100vw, (max-width:1200px) 50vw, 33vw">
+            <img src="./assets/images/portrait-square/portrait-square-800.jpg" 
+                alt="Professional portrait of Jesus Azpitarte smiling on the La Jolla Shores Boardwalk." 
+                class="raised" style="width:100%;height:auto;" loading="lazy">
           </picture>
 
-          <p> <span> Snapshot: </span> Lorem ipsum dolor sit amet,adipiscing elit, 
-          sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. enim
-          ad minim veniam, <emp> UCSD </emp> quis nostrud laboris nisi ut 
-          aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit 
-          in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur
-          sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt
-          mollit anim id est laborum. 
-          </p>
-          
-          <div>
-            <button> View Resume </button>
-            <button> Download Resume </button>
-          </div>
+          <p> I am a computer programmer with a strong background in visual design and art who's passionate for learning. I love using my programming skills and artistic abilities for good and meaningful projects.</p>
+          <h2> Technical Background </h2>
+          <p> I have the most technical experience in web development. I have been a designer and developer in various projects. <br> <strong> Check them out:</strong> </p> <br>
+          <a href="./portfolio.html"> <button> View Projects</button> </a>
+
+          <h3> Tools </h3>
+          <tool-list>
+            <ul> 
+              <h4> Web Programming</h4>
+              <li> HTML </li>
+              <li> CSS </li>
+              <li> JavaScript </li>
+              <li> TypesScript </li>
+              <li> Mongo </li>
+              <li> Express </li>
+              <li> React </li>
+              <li> Node </li>
+            </ul>
+
+            <ul>
+              <h4> Miscellaneous</h4>
+              <li> Figma </li>
+              <li> Python </li>
+              <li> Krita </li>
+              <li> OpenGL</li>
+              <li> Qiskit </li>
+            </ul>
+          </tool-list>
         </section>
 
-        <br> 
-
-        <section id="technical-strengths">
-          <h2> Technical Strengths</h2>
-
-          
-          <picture> 
-            <source srcset="/assets/images/vegas-small.webp" media="(max-width: 850px)">
-            <source srcset="/assets/images/vegas-full.webp" media="(min-width: 1100px)">
-            <img src="/assets/images/vegas-large.jpg" alt="jesus holding the peace sign in Las Vegas.">
-          </picture>
-
-
-          <p> <span> Key Tech </span> Lorem ipsum dolor sit amet,adipiscing elit, 
-          sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. enim
-          ad minim veniam, <emp> UCSD </emp> quis nostrud laboris nisi ut 
-          aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit 
-          in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur
-          sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt
-          mollit anim id est laborum. 
-          </p>
-
+        <!-- 
+        <section id="interview-questions">
+          <h2> Interview Questions </h2>
+          <p> These are my answers to some of </p>
           <ol>
-            <li> HTML, CSS, JS </li>
-            <li> Mongo, Express, React, Node, TS </li>
-            <li> Python </li>
+            <li>
+              <details>
+                <summary> Why should we hire you? </summary>
+              </details>
+            </li>
+            <li>
+              <details>
+                <span>How do you give and receive feedback? </span>
+              </details>
+            </li>
+            <li>
+              <details>
+                <summary> What's your approach to problem solving?  </summary>
+              </details>
+            </li>
+            <li>
+              <details>
+                <summary> What challenges have shapped your professional approach? </summary>
+              </details>
+            </li>
           </ol>
-        </section>
+        </section> -->
 
-        <section id="personal">
-          <h2> The Real Me </h2>
+        <section id="personal-interests">
+          <h2> Personal Interests </h2>
+          <h3> Guitar </h3>
+          <p> I love strumming and noodling around on my electric and acoustic guitar! I listen to alternative rock and french house. </p>
+          <p> Listen to this rock demo I made: </p>
 
-         
-          <picture> 
-            <source srcset="/assets/images/vegas-small.webp" media="(max-width: 850px)">
-            <source srcset="/assets/images/vegas-full.webp" media="(min-width: 1100px)">
-            <img src="/assets/images/vegas-large.jpg" alt="jesus holding the peace sign in Las Vegas.">
-          </picture>
+          <audio controls>
+            <source src="./assets/audio/asymptote.mp3" type="audio/mpeg"> 
+            <source src="./assets/audio/asymptote.wav" type="audio/wav"> 
+            Your browser does not support the audio element.
+          </audio>
 
-
-          <h3> Biography </h3>
-          <p> Lorem ipsum dolor sit amet,adipiscing elit, 
-          sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. enim
-          ad minim veniam, <emp> UCSD </emp> quis nostrud laboris nisi ut 
-          aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit 
-          in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur
-          sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt
-          mollit anim id est laborum. 
-          </p>
+          <h4> Track Art Cover </h4>
+          <img src="./assets//images/baldomero.png" width=70% height=auto alt="Art cover with a hand on top of an ocean. "> 
+          <h3> Art </h3>
+          <p> My favorite hobby includes drawing and all sorts of two-dimensional art!  Here's a piece I'm really proud of:</p>
+          <img src="./assets/images/art/anger.jpg"> 
         </section>
       </article>
-     </main>
+    </main>
 
-     <footer>
-      <hr>
-      <small>&copy; 2025 Jesus Azpitarte. All Rights Reserved. </small>
+    <hr> 
+    <footer>
+      <small> &copy; 2025 Jesus Azpitarte. Licensed under 
+        <a href="https://creativecommons.org/licenses/by-nc-nd/4.0/" target="_blank" rel="noopener noreferrer">
+          CC&nbsp;BY-NC-ND&nbsp;4.0
+        </a>. Viewing only.
+      </small>
     </footer>
   </body>
 </html>
